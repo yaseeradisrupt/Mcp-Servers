@@ -8,7 +8,6 @@ from dotenv import load_dotenv
 load_dotenv()
 mcp = FastMCP("KIVA")
 SERP_API_KEY=os.getenv("SERP_API_KEY")
-# https://serpapi.com/search?engine=google&q=shoes&location=United+States&hl=en&api_key=81a800686d78bc3bea4317876995f75043ae3219d64f4e45cbbe8940526cc3ee
 
 @mcp.tool()
 async def get_related_keywords(keyword: str, country: str = 'US', lang: str = 'en') -> str:
